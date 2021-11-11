@@ -21,7 +21,7 @@ We used [split](https://github.com/ffmpbgrnn/CMN) for SSv2-part, which are provi
 # Train and eval
 Example: Run the following commands to train and evaluate for HMDB51 split:
 ```
-$python -u new_run_combine.py -c check_dir --training_iterations 128000 --print_freq 1000 --query_per_class_test 1 --query_per_class 1 --shot 1 --way 5 --tasks_per_batch 64 --test_iters 12800 --num_test_tasks 10000 --dataset hmdb --split 3 -lr 0.01 --img_size 224 --seq_len 16 --start_gpu 0 --num_workers 10 --num_gpus 1 --method r3d --train_num_classes 51 --linspace --alpha 1.0 --lamda 2 --pre_data KMS
+$python -u STAF_run.py -c check_points_dir --data_folder Directory_to_load_the_splits_and_dataset --training_iterations 128000 --print_freq 1000 --query_per_class_test 1 --query_per_class 1 --shot 1 --way 5 --tasks_per_batch 64 --test_iters 6400 --num_test_tasks 10000 --dataset hmdb --split 3 -lr 0.01 --img_size 224 --seq_len 16 --start_gpu 0 --num_workers 10 --num_gpus 1 --train_num_classes 51 --pretrained_3dmodels --pretrained_path Directory_of_pretrained_3d_models --alpha 1.0 --lamda 0.5 --pre_data KMS 
 ```
 Most of these are the default args.See paper for other hyperparams.
 
