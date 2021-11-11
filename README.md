@@ -26,4 +26,4 @@ $python -u new_run_combine.py -c check_dir --training_iterations 128000 --print_
 Most of these are the default args.See paper for other hyperparams.
 
 # References
-This algorithm library is extended from [TRX](https://github.com/tobyperrett/trx) and [Cross-attention](https://github.com/blue-blue272/fewshot-CAN), which builds upon several existing publicly available code:  [CNAPs](https://github.com/cambridge-mlg/cnaps), [torch_videovision](https://github.com/hassony2/torch_videovision) and [Dynamic Few-Shot Visual Learning without Forgetting](https://github.com/gidariss/FewShotWithoutForgetting)
+This algorithm library is extended from [TRX](https://github.com/tobyperrett/trx) and [Cross-attention](https://github.com/blue-blue272/fewshot-CAN), which builds upon several existing publicly available code:  [CNAPs](https://github.com/cambridge-mlg/cnaps), [torch_videovision](https://github.com/hassony2/torch_videovision) and [R3D Backbone](https://github.com/kenshohara/3D-ResNets-PyTorch)
