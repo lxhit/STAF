@@ -6,24 +6,14 @@ We propose MASTAF, a Model-Agnostic Spatio-Temporal Attention Fusion network for
 
 **Environment**:
 1. Anaconda with python >= 3.8
-2. Pytorch >= 1.8.1
-3. Torchvision >= 0.9.1
-4. Tensorflow >=2.2.0
+2. sklearn >= 0.22.1
+3. seaborn >= 0.10
+4. matplotlib >=3.3.0
 
-**Pre-trained 3D CNNs embedding network**:
 
-We use a 3D ResNet-50 with the weights pre-trained on the combined dataset with Kinetics-700, Moments in Time, and Start Action as our embedding network. We downloaded the weights from [here](https://github.com/kenshohara/3D-ResNets-PyTorch).
+**Data**:
 
-**Few-shot splits**:
-
-We used [split](https://github.com/ffmpbgrnn/CMN) for SSv2-part, which are provided by the authors of the authors of [CMN](https://openaccess.thecvf.com/content_ECCV_2018/papers/Linchao_Zhu_Compound_Memory_Networks_ECCV_2018_paper.pdf) (Zhu and Yang, ECCV 2018). We also used the split from [OTAM](https://openaccess.thecvf.com/content_CVPR_2020/papers/Cao_Few-Shot_Video_Classification_via_Temporal_Alignment_CVPR_2020_paper.pdf) (Cao et al. CVPR 2020) for SSv2-all, and splits from [ARN](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123500511.pdf) (Zhang et al. ECCV 2020) for HMDB and UCF. For these splits files,  please refer to  ./save/video_datasets/splits/.
-
-# Train and eval
-Example: Run the following commands to train and evaluate for HMDB51 split:
-```
-$python -u STAF_run.py -c check_points_dir --data_folder Directory_to_load_the_splits_and_dataset --training_iterations 128000 --print_freq 1000 --query_per_class_test 1 --query_per_class 1 --shot 1 --way 5 --tasks_per_batch 64 --test_iters 6400 --num_test_tasks 10000 --dataset hmdb --split 3 -lr 0.01 --img_size 224 --seq_len 16 --start_gpu 0 --num_workers 10 --num_gpus 1 --train_num_classes 51 --pretrained_3dmodels --pretrained_path Directory_of_pretrained_3d_models --alpha 1.0 --lamda 0.5 --pre_data KMS 
-```
-Most of these are the default args.See paper for other hyperparams.
+To directly view the running results in the notebooks, or if you can modify the corresponding data directory in your own dataset.
 
 # References
-This algorithm library is extended from [TRX](https://github.com/tobyperrett/trx) and [Cross-attention](https://github.com/blue-blue272/fewshot-CAN), which builds upon several existing publicly available code:  [CNAPs](https://github.com/cambridge-mlg/cnaps), [torch_videovision](https://github.com/hassony2/torch_videovision) and [R3D Backbone](https://github.com/kenshohara/3D-ResNets-PyTorch)
+This algorithm library is extended from [scikit-learn Tutorials](https://scikit-learn.org/stable/tutorial/index.html).
